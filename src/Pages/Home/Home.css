@@ -1,0 +1,8 @@
+.home-main {
+    background: url('../../Asstes/home-background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+};
+.slick-slider button {
+    display: none !important;
+}
