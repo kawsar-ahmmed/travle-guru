@@ -2,8 +2,8 @@ import React from 'react';
 import './Home.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons';
-import { Carousel } from 'react-responsive-carousel';
 import HomeSlider from './HomeSlider';
+import { NavLink } from 'react-router-dom';
 
 const Home = () => {
     const home = {
@@ -17,11 +17,11 @@ const Home = () => {
                 <div className="home-info text-white col-start-1 col-end-1">
                     <h1 className='text-[70px] font-bold uppercase'>{home.title}</h1>
                     <p>{home.description}</p>
-                    <button className=' mt-6 px-7 py-2 bg-[#F9A51A] rounded text-black'>Booking<FontAwesomeIcon
+                    <NavLink to='/destination'><button className=' mt-6 px-7 py-2 bg-[#F9A51A] rounded text-black'>Booking<FontAwesomeIcon
                         className=' ml-2'
-                        icon={faArrowRightLong} /></button>
+                        icon={faArrowRightLong} /></button></NavLink>
                 </div>
-                <div className=' col-start-2 col-end-4'>
+                <div className='col-start-2 col-end-4'>
                     <HomeSlider></HomeSlider>
                 </div>
 

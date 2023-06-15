@@ -1,13 +1,13 @@
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
 .slick-slider .slick-arrow {
     display: none !important;
 }
-.slick-slider .slick-current img{
+
+.slick-slider .slick-current img {
     border: 5px solid #FBBC04;
     border-radius: 28px;
 }

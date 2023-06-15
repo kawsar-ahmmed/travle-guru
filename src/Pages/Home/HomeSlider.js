@@ -22,7 +22,7 @@ const HomeSlider = () => {
     };
 
     return (
-        <div>
+        <div className="home-slider">
             <div>
                 <Slider {...settings}>
                     <div>
@@ -35,7 +35,7 @@ const HomeSlider = () => {
                         <img className="w-[90%]" src={img3} alt="" />
                     </div>
                     <div>
-                        <img className="w-[90%]" src={img1} alt="" />
+                        <img className="w-[90%]" src={img2} alt="" />
                     </div>
                 </Slider>
             </div>

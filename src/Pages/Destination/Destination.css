@@ -1,0 +1,11 @@
+.content-main h1{
+    font-size: 80px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.content-main p {
+    font-weight: 400;
+    line-height: 26px;
+    font-size: 16px;
+    padding-bottom: 20px;
+}
