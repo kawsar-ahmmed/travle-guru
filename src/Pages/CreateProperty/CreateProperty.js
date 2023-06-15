@@ -1,7 +1,9 @@
 import React from 'react';
 import './CreateProperty.css'
+import { useParams } from 'react-router-dom';
 
 const CreateProperty = () => {
+    const params = useParams();
 
     const handleProperty = event => {
         event.preventDefault();

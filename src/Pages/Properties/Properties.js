@@ -16,9 +16,25 @@ const Properties = () => {
         },
         zoom: 11
     };
+    const handleDelete = id => {
+        const process = window.confirm('Do you want to delete?');
+        const url = `http://localhost:5001/createproperty/${id}`
+        console.log(url)
+
+        if (process) {
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    const remaining = property.filter(item => item._id !== id);
+                    setProperty(remaining);
+                    console.log(data)
+                })
+        }
+    }
     const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
-    console.log(property)
     return (
         <div className='container m-auto w-auto'>
             <div className="properties grid grid-cols-4 mt-12 ">
@@ -43,6 +59,9 @@ const Properties = () => {
                                     </div>
                                     <div className="book-button pt-3">
                                         <button className='py-2 px-[28px] rounded bg-[#F9A51A] text-white text-[16px]'>Book now</button>
+                                        <div className="delete-button pt-[10px]" >
+                                            <button onClick={() => handleDelete(item._id)} className='py-2 px-[28px] rounded bg-red-600 text-white text-[16px]'>Delete Items</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

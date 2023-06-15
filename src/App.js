@@ -22,6 +22,7 @@ function App() {
         <Route path='/destination' element={<Destination />} />
         <Route path='/create-property' element={<CreateProperty />} />
         <Route path='/properties' element={<Properties />} />
+        <Route path='/properties/:id' element={<Properties />} />
       </Routes>
     </div>
   );
