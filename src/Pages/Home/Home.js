@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons';
 import HomeSlider from './HomeSlider';
 import { NavLink } from 'react-router-dom';
+import Header from '../Header/Header';
 
 const Home = () => {
     const home = {

@@ -1,20 +1,27 @@
-import { Route, Routes } from 'react-router-dom';
-import logo from './logo.svg';
+import { Route, Routes, useLocation } from 'react-router-dom';
+
 import Home from './Pages/Home/Home';
 import Header from './Pages/Header/Header';
+import HeaderSecond from './Pages/Header/HeaderSecond';
 import Destination from './Pages/Destination/Destination';
 import CreateProperty from './Pages/CreateProperty/CreateProperty';
-
+import Properties from './Pages/Properties/Properties';
 
 function App() {
+  const location = useLocation();
+  const showHeaderSecond = location.pathname === '/properties';
+  const showHeader = !showHeaderSecond;
+
   return (
     <div className="App">
-      <Header></Header>
+      {showHeader && <Header />}
+      {showHeaderSecond && <HeaderSecond />}
       <Routes>
-        <Route path='/' element={<Home></Home>}></Route>
-        <Route path='/home' element={<Home></Home>}></Route>
-        <Route path='/destination' element={<Destination></Destination>}></Route>
-        <Route path='/create-property' element={<CreateProperty></CreateProperty>}></Route>
+        <Route path='/' element={<Home />} />
+        <Route path='/home' element={<Home />} />
+        <Route path='/destination' element={<Destination />} />
+        <Route path='/create-property' element={<CreateProperty />} />
+        <Route path='/properties' element={<Properties />} />
       </Routes>
     </div>
   );

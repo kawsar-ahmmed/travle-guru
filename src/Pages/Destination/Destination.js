@@ -6,7 +6,7 @@ import './Destination.css'
 const Destination = () => {
     const destination = {
         title: "Cox's bazar",
-        desctiption: 'Cox’s Bazar is a town on the southeast coast of Bangladesh. It’s known for its very long, sandy beachfront, stretching from Sea Beach in the north to Kolatoli Beach in the south. Aggameda Khyang monastery is home to bronze statues and centuries-old Buddhist manuscripts. South of town, the tropical rainforest of Himchari National Park has waterfalls and many birds. North, sea turtles breed on nearby Sonadia Island.'
+        description: 'Cox’s Bazar is a town on the southeast coast of Bangladesh. It’s known for its very long, sandy beachfront, stretching from Sea Beach in the north to Kolatoli Beach in the south. Aggameda Khyang monastery is home to bronze statues and centuries-old Buddhist manuscripts. South of town, the tropical rainforest of Himchari National Park has waterfalls and many birds. North, sea turtles breed on nearby Sonadia Island.'
     }
     return (
         <div className='home-main justify-center h-screen flex items-center bg-slate-300'>
@@ -14,7 +14,7 @@ const Destination = () => {
                 <div className="home-info text-white col-start-1 col-end-3 ">
                     <div className="content-main space-y-2">
                         <h1>{destination.title}</h1>
-                        <p>{destination.desctiption}</p>
+                        <p>{destination.description}</p>
                         <button className=' mt-6 px-7 py-2 bg-[#F9A51A] rounded text-black'>Booking<FontAwesomeIcon
                             className=' ml-2'
                             icon={faArrowRightLong} /></button>

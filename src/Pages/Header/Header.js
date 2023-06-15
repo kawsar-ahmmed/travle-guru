@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../../Asstes/logo-w.png'
+import logo2 from '../../Asstes/logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from 'react-router-dom';
@@ -20,7 +21,7 @@ const Header = () => {
                         <NavLink to='/home'>Home</NavLink>
                         <NavLink to='/destination'>Destination</NavLink>
                         <NavLink to='/create-property'>Add Property</NavLink>
-                        <NavLink>Contact</NavLink>
+                        <NavLink to='/properties'>Properties</NavLink>
                         <div className="nav-button">
                             <button className='py-2 px-[28px] rounded bg-[#F9A51A] text-white text-[16px]'>Login</button>
                         </div>

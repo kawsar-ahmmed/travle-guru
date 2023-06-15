@@ -7,15 +7,16 @@ const CreateProperty = () => {
         event.preventDefault();
         const name = event.target.name.value;
         const description = event.target.description.value;
+        const price = event.target.price.value;
         const totalPrice = event.target.totalPrice.value;
         const rating = event.target.rating.value;
         const imgUrl = event.target.imgUrl.value;
-        const property = { name, description, totalPrice, rating, imgUrl };
+        const property = { name, description, totalPrice, rating, imgUrl, price };
         console.log(property);
         // url
         const url = `http://localhost:5001/createproperty`;
         fetch(url, {
-            method: 'POST',
+            method: 'POST', 
             headers: {
                 'content-type': 'application/json',
             },
